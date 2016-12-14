@@ -3,18 +3,18 @@
 const RealmModel = new require('../lib/realm-model.js');
 
 
-class QuestionModel extends RealmModel {
+class UsersModel extends RealmModel {
 
     model() {
         this.schema = {
             name: 'Users',
-            primaryKey: 'uuid',
+            primaryKey: 'id',
             properties: {
-                uuid       : 'string',
-                username   : 'string',
+                id       : 'int',
+                username : 'string',
             }
         };
     }
 }
 
-module.exports = QuestionModel;
+module.exports = UsersModel;

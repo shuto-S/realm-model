@@ -1,28 +1,28 @@
 'use strict';
 
-const QuestionModel = new require('./question-model.js');
+const UsersModel = new require('./users-model.js');
 
 
-var questionModel = new QuestionModel();
+var usersModel = new UsersModel();
 
-questionModel.save({uuid: '1', username: 'aaa'});
-questionModel.save({uuid: '2', username: 'bbb'});
+usersModel.save({id: 1, username: 'aaa'});
+usersModel.save({id: 2, username: 'bbb'});
 
-let data = questionModel.get();
+let data = usersModel.get();
 console.log(data);
 
-let data1 = questionModel.filtered("uuid == '1'");
+let data1 = usersModel.filtered("id == 1");
 console.log(data1);
 
-let data2 = questionModel.get(2);
+let data2 = usersModel.get(2);
 console.log(data2);
 
-questionModel.realm.write(() => {
+usersModel.realm.write(() => {
     data2.username = 'ccc';
 });
 
 console.log(data);
 
-questionModel.delete(questionModel.get());
+usersModel.delete(usersModel.get());
 
 process.exit();
