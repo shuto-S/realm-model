@@ -1,6 +1,6 @@
 'use strict';
 
-const RealmModel = new require('../core/realm-model.js');
+const RealmModel = new require('../lib/realm-model.js');
 
 
 class QuestionModel extends RealmModel {

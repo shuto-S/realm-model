@@ -1,6 +1,6 @@
 'use strict';
 
-const QuestionModel = new require('./model/question-model.js');
+const QuestionModel = new require('./question-model.js');
 
 
 var questionModel = new QuestionModel();
