@@ -1,0 +1,26 @@
+{
+  "name": "realm-model",
+  "version": "1.0.0",
+  "description": "",
+  "main": "question-model.js",
+  "dependencies": {
+    "realm": "^0.15.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/shuto-S/realm-model.git"
+  },
+  "keywords": [
+    "realm"
+  ],
+  "author": "shuto-S",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shuto-S/realm-model/issues"
+  },
+  "homepage": "https://github.com/shuto-S/realm-model#readme"
+}
