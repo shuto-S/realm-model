@@ -1,8 +1,8 @@
 {
   "name": "realm-model",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "question-model.js",
+  "main": "index.js",
   "dependencies": {
     "realm": "^0.15.0"
   },
