@@ -3,7 +3,7 @@
 const UserModel = new require('./user-model.js');
 
 
-var userModel = new UserModel();
+var userModel = new UserModel(__dirname + '/../db/realm');
 
 userModel.save({id: 1, name: 'aaa'});
 userModel.save({id: 2, name: 'bbb'});

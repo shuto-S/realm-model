@@ -5,8 +5,8 @@ const RealmModel = new require('../lib/realm-model.js');
 
 class UserModel extends RealmModel {
 
-    constructor() {
-        super();
+    constructor(dbPath = null) {
+        super(dbPath);
 
         this.realm.addListener('change', () => {
             console.log('update!');

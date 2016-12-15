@@ -4,7 +4,7 @@ const UserModel = new require('./user-model.js');
 const UserSerialiser = new require('./user-serializer.js');
 
 
-let userModel = new UserModel();
+let userModel = new UserModel(__dirname + '/../db/realm');
 
 userModel.save({id: 1, name: 'aaa'});
 userModel.save({id: 2, name: 'bbb'});

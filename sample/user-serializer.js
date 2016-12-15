@@ -1,6 +1,6 @@
 'use strict';
 
-// const RealmSerialiser = new require('../lib/realm-serializer.js');
+const RealmSerialiser = new require('../lib/realm-serializer.js');
 const UserModel = new require('./user-model.js');
 
 
