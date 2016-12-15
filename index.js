@@ -2,6 +2,6 @@
 
 
 module.exports = {
-    RealmModel      : new require(__dirname + '/lib/realm-model.js'),
-    RealmSerialiser : new require(__dirname + '/lib/realm-serializer.js'),
+    RealmModel      : new require(path.join(__dirname, '/lib/realm-model.js')),
+    RealmSerialiser : new require(path.join(__dirname, '/lib/realm-serializer.js'))
 }
