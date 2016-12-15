@@ -1,31 +1,31 @@
 'use strict';
 
-const UsersModel = new require('./users-model.js');
+const UserModel = new require('./user-model.js');
 
 
-var usersModel = new UsersModel();
+var userModel = new UserModel();
 
-usersModel.save({id: 1, name: 'aaa'});
-usersModel.save({id: 2, name: 'bbb'});
+userModel.save({id: 1, name: 'aaa'});
+userModel.save({id: 2, name: 'bbb'});
 
-let data = usersModel.get();
+let data = userModel.get();
 console.log(data);
 
-let data1 = usersModel.filtered("id == 1");
+let data1 = userModel.filtered("id == 1");
 console.log(data1);
 
-let data2 = usersModel.get(2);
+let data2 = userModel.get(2);
 console.log(data2);
 
-usersModel.realm.write(() => {
+userModel.realm.write(() => {
     data2.name = 'ccc';
 });
 console.log(data);
 
-usersModel.update({name: 'ddd'}, "id == 2");
+userModel.update({name: 'ddd'}, "id == 2");
 console.log(data);
 
-usersModel.realm.removeAllListeners();
-usersModel.delete(usersModel.get());
+userModel.realm.removeAllListeners();
+userModel.delete(userModel.get());
 
 process.exit();
