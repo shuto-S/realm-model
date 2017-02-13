@@ -1,6 +1,6 @@
 'use strict';
 
-const UserModel = new require('./user-model.js');
+const UserModel = require('./user-model.js');
 
 
 var userModel = new UserModel(__dirname + '/../db/realm');

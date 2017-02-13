@@ -20,7 +20,7 @@ Simple realm wrapper.
 ```js
 'use strict';
 
-const rm = new require('realm-model');
+const rm = require('realm-model');
 
 class UserModel extends rm.RealmModel {
     model() {
@@ -48,7 +48,7 @@ RealmModel wrapper.
 ```js
 'use strict';
 
-const rm = new require('realm-model');
+const rm = require('realm-model');
 
 class UserModel extends rm.RealmModel {
     model() {

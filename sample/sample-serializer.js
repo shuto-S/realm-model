@@ -1,7 +1,7 @@
 'use strict';
 
-const UserModel = new require('./user-model.js');
-const UserSerialiser = new require('./user-serializer.js');
+const UserModel = require('./user-model.js');
+const UserSerialiser = require('./user-serializer.js');
 
 
 var userModel = new UserModel(__dirname + '/../db/realm');

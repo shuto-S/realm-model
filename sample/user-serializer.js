@@ -1,9 +1,9 @@
 'use strict';
 
-const RealmSerialiser = new require('../lib/realm-serializer.js');
+const rm = require('../index.js');
 
 
-class UserSerialiser extends RealmSerialiser {
+class UserSerialiser extends rm.RealmSerialiser {
 
     fields() {
         this.fields = ['name'];

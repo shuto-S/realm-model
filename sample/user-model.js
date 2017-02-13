@@ -1,9 +1,9 @@
 'use strict';
 
-const RealmModel = new require('../lib/realm-model.js');
+const rm = require('../index.js');
 
 
-class UserModel extends RealmModel {
+class UserModel extends rm.RealmModel {
 
     constructor(dbPath = null) {
         super(dbPath);
