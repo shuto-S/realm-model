@@ -20,9 +20,9 @@ Simple realm wrapper.
 ```js
 'use strict';
 
-const rm = require('realm-model');
+const RealmModel = require('realm-model');
 
-class UserModel extends rm.RealmModel {
+class UserModel extends RealmModel {
     model() {
         this.schema = {
             name: 'User',
@@ -39,41 +39,4 @@ let userModel = new UserModel();
 userModel.save({id: 1, name: 'test'});
 let datas = userModel.get();
 console.log(datas);
-```
-
-### RealmSerialiser
-RealmModel wrapper.
-
-#### Example
-```js
-'use strict';
-
-const rm = require('realm-model');
-
-class UserModel extends rm.RealmModel {
-    model() {
-        this.schema = {
-            name: 'User',
-            primaryKey: 'id',
-            properties: {
-                id   : 'int',
-                name : 'string',
-            }
-        };
-    }
-}
-
-class UserSerialiser extends rm.RealmSerialiser {
-
-    fields() {
-        this.fields = ['name'];
-    }
-}
-
-let userModel = new UserModel();
-let userSerializer = new UserSerialiser(userModel, {id: 3, name: 'bbb'});
-console.log(userSerializer.get());
-console.log(userSerializer.data);
-userSerializer.save();
-console.log(userSerializer.get());
 ```

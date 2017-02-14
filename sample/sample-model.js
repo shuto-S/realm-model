@@ -1,9 +1,9 @@
 'use strict';
 
+const path = require('path');
 const UserModel = require('./user-model.js');
 
-
-var userModel = new UserModel(__dirname + '/../db/realm');
+var userModel = new UserModel(path.join(__dirname, '/../db/realm'));
 
 userModel.save({id: 1, name: 'aaa'});
 userModel.save({id: 2, name: 'bbb'});

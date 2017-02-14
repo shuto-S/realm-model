@@ -1,9 +1,7 @@
 'use strict';
 
 const path = require('path');
+const RealmModel = require(path.join(__dirname, '/lib/realm-model.js'));
 
 
-module.exports = {
-    RealmModel      : new require(path.join(__dirname, '/lib/realm-model.js')),
-    RealmSerialiser : new require(path.join(__dirname, '/lib/realm-serializer.js'))
-}
+module.exports = RealmModel;

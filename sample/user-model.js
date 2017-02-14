@@ -1,9 +1,9 @@
 'use strict';
 
-const rm = require('../index.js');
+const RealmModel = require('../index.js');
 
 
-class UserModel extends rm.RealmModel {
+class UserModel extends RealmModel {
 
     constructor(dbPath = null) {
         super(dbPath);
@@ -19,7 +19,7 @@ class UserModel extends rm.RealmModel {
             primaryKey: 'id',
             properties: {
                 id   : 'int',
-                name : 'string',
+                name : 'string'
             }
         };
     }
