@@ -1,8 +1,9 @@
 'use strict';
 
 const path = require('path');
+const del = require('del');
 const RealmModel = require('../index.js');
-var assert = require('assert');
+const assert = require('assert');
 
 
 class UserModel extends RealmModel {
@@ -25,10 +26,13 @@ describe('RealmModel', function() {
     let userModel = new UserModel(dbPath);
 
     before(function() {
+        del.sync(['./coverage']);
     });
 
     after(function() {
-        userModel.delete(userModel.get());
+        del.sync(['./default.realm**']);
+        del.sync(['./realm-object-server']);
+        del.sync(['./test/db**']);
     });
 
     beforeEach(function() {
