@@ -40,6 +40,18 @@ describe('RealmModel', function() {
         userModel.delete(userModel.get());
     });
 
+    describe('Model object create', function() {
+        it('with DB path', function() {
+            let tes = new UserModel(dbPath);
+            assert.ok(true);
+        });
+
+        it('non DB path', function() {
+            let tes = new UserModel();
+            assert.ok(true);
+        });
+    });
+
     describe('write', function() {
         var testData = {id: 999, name: 'create_test'};
 
