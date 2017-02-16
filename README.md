@@ -1,7 +1,9 @@
-# realm-model
+# RealmModel
+Simple realm wrapper.
 
 [![Code Climate](https://codeclimate.com/github/shuto-S/realm-model/badges/gpa.svg)](https://codeclimate.com/github/shuto-S/realm-model)
 [![Dependency Status](https://gemnasium.com/badges/github.com/shuto-S/realm-model.svg)](https://gemnasium.com/github.com/shuto-S/realm-model)
+[![npm](https://img.shields.io/npm/dt/express.svg)](https://www.npmjs.com/package/realm-model)
 
 
 ## Install
@@ -9,12 +11,8 @@
 npm install realm-model
 ```
 
-
 ## Usage
 [sample here](./sample)
-
-### RealmModel
-Simple realm wrapper.
 
 #### Example 
 ```js
