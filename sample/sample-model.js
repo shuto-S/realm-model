@@ -3,7 +3,8 @@
 const path = require('path');
 const UserModel = require('./user-model.js');
 
-var userModel = new UserModel(path.join(__dirname, '/../db/realm'));
+let dbPath = path.join(__dirname, './db/realm');
+var userModel = new UserModel(dbPath);
 
 userModel.save({id: 1, name: 'aaa'});
 userModel.save({id: 2, name: 'bbb'});
