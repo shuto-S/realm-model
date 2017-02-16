@@ -41,13 +41,15 @@ describe('RealmModel', function() {
     });
 
     describe('write', function() {
+        var testData = {id: 999, name: 'create_test'};
+
         it('create method', function() {
-            userModel.create({id: 999, name: 'create_test'});
+            userModel.create(testData);
             assert.ok(true);
         });
 
         it('save method', function() {
-            userModel.save({id: 999, name: 'create_test'});
+            userModel.save(testData);
             assert.ok(true);
         });
     });
