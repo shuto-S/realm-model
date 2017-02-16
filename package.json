@@ -7,10 +7,11 @@
     "realm": "^1.0.2"
   },
   "devDependencies": {
+    "istanbul": "^0.4.5",
     "mocha": "^3.2.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "istanbul cover _mocha"
   },
   "repository": {
     "type": "git",
